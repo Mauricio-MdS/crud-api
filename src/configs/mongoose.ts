@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 if (!process.env.DBURI) {
-  throw new Error("Must especify database URL in .env file.");
+  throw new Error("Must especify DBURI as database URL in .env file.");
 }
 
 mongoose
@@ -10,4 +10,3 @@ mongoose
   .catch((error) => console.log(error));
 
 export default mongoose;
-
